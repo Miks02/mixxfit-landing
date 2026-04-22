@@ -1,0 +1,25 @@
+---
+import "../styles/global.css";
+import Navbar from "../components/navbar.astro"
+
+const { title = "MixxFit" } = Astro.props;
+const { subtitle = "Begin Your Journey" } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title} | {subtitle}</title>
+	</head>
+	<body class="min-h-screen bg-linear-to-br from-slate-500 to-slate-500/90 px-6 py-2">
+
+        <Navbar/>
+
+		<main>
+            <slot/></slot>
+        </main>
+	</body>
+</html>
