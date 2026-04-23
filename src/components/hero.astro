@@ -23,54 +23,45 @@ import HeroStatCard from "./heroStatCard.astro";
     </div>
 
     <div class="bg-white shadow-2xl bg-radial-[at_50%_50%] from-yellow-500 to-yellow-600 rounded-full py-15 md:py-30 relative">
-        <div class="hidden xl:block absolute -top-5 right-1/2 transform translate-x-1/2 bg-sky-200/90 backdrop-blur-sm shadow-lg font-semibold text-gray-600 rounded-lg p-4">
-            <div class="flex gap-4 items-center">
-                <i class="fa-solid fa-dumbbell text-sky-600 text-xl"></i>
+        <HeroStatCard
+            title="Last Workout"
+            subtitle="Upper Body - 6 Exercises"
+            icon="fa-solid fa-dumbbell"
+            cardColor="bg-sky-200/90"
+            iconColor="text-sky-600"
+            positionClasses="-top-5 right-1/2 translate-x-1/2"
+            animDelay="0s"
+        />
 
-                <div class="flex flex-col">
-                    <p class="text-sm">Last Workout</p>
-                    <p class="text-slate-800">Upper Body - 6 Exercises</p>
+        <HeroStatCard
+            title="Daily Calories"
+            subtitle="3143 kCal"
+            icon="fa-solid fa-fire-flame-curved"
+            cardColor="bg-amber-200/90"
+            iconColor="text-amber-600"
+            positionClasses="top-40 -left-10"
+            animDelay="1s"
+        />
 
-                </div>
-            </div>
-        </div>
+        <HeroStatCard
+            title="Exercise Library"
+            subtitle="240+ Exercises"
+            icon="fa-solid fa-book-open"
+            cardColor="bg-emerald-200/90"
+            iconColor="text-emerald-600"
+            positionClasses="bottom-40 right-0"
+            animDelay="2s"
+        />
 
-        <div class="hidden xl:block absolute top-40 -left-10 bg-amber-200/90 backdrop-blur-sm shadow-lg rounded-xl p-4 font-semibold text-gray-600 ">
-            <div class="flex gap-4 items-center">
-                <i class="fa-solid fa-fire-flame-curved text-amber-600 text-2xl"></i>
-
-                <div class="flex flex-col">
-                    <p class="text-sm">Daily Calories</p>
-                    <p class="text-slate-800">3143 kCal</p>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="hidden xl:block absolute bottom-40 right-0 font-semibold bg-emerald-200/90 backdrop-blur-sm text-gray-600 shadow-lg rounded-lg p-4">
-            <div class="flex gap-4 items-center">
-                <i class="fa-solid fa-book-open text-emerald-600 text-xl"></i>
-
-                <div class="flex flex-col">
-                    <p class="text-sm">Exercise Library</p>
-                    <p class="text-slate-800 text-lg"> 240+ Exercises</p>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="hidden xl:block absolute -bottom-5 font-semibold bg-violet-200/90 backdrop-blur-sm text-gray-600 right-1/2 transform translate-x-1/2  shadow-lg rounded-lg p-4">
-            <div class="flex gap-4 items-center">
-                <i class="fa-solid fa-weight-scale text-violet-600 text-xl"></i>
-
-                <div class="flex flex-col">
-                    <p class="text-sm">Weight Progress</p>
-                    <p class="text-slate-800 text-lg">85kg > 80kg</p>
-
-                </div>
-            </div>
-        </div>
-
+        <HeroStatCard
+            title="Weight Progress"
+            subtitle="85kg > 80kg"
+            icon="fa-solid fa-weight-scale"
+            cardColor="bg-violet-200/90"
+            iconColor="text-violet-600"
+            positionClasses="-bottom-5 right-1/2 translate-x-1/2"
+            animDelay="0.5s"
+        />
 
         <img src="/public/hero-image.png" class="" alt="">
     </div>
