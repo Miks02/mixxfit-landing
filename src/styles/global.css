@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+* {
+  font-family: 'Inter', sans-serif;
+}
+
 .shadow-all {
   box-shadow: 0 0 5px #333;
 }
