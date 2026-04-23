@@ -3,8 +3,8 @@ import HowItWorksStep from "./howItWorksStep.astro";
 ---
 
 
-<section id="how-it-works" class="w-full p-8 bg-linear-to-br from-slate-500 to-slate-500/90 rounded-t-[110px] md:rounded-t-[200px] shadow-all rounded-b-[110px] md:rounded-b-[200px] ">
-     <div class="flex font-semibold flex-col mx-auto max-w-7xl mb-12 md:mb-14 items-center">
+<section id="how-it-works" class="w-full p-8 bg-linear-to-br from-slate-500 to-slate-500/90 rounded-t-[110px] md:rounded-t-[200px] shadow-all rounded-b-[110px] md:rounded-b-[200px] flex flex-col gap-8">
+    <div class="flex font-semibold flex-col mx-auto max-w-7xl mb-12 md:mb-14 items-center">
         <h3 class="text-xl text-teal-800 px-4 py-2.5 bg-slate-100/90 backdrop-blur-sm rounded-lg shadow-lg hiw-reveal-title opacity-0 translate-y-3">How It Works</h3>
     </div>
     <div class="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[1.05fr_1.25fr] lg:gap-10">
@@ -13,7 +13,7 @@ import HowItWorksStep from "./howItWorksStep.astro";
             <h2 class="text-4xl md:text-5xl font-semibold tracking-tight text-slate-100 leading-tight hiw-reveal-text opacity-0 translate-y-4 text-center">
                 Three steps to your best shape
             </h2>
-            <p class="mt-6 max-w-xl text-xl text-slate-200/90 leading-relaxed hiw-reveal-text opacity-0 translate-y-4 text-center">
+            <p class="mt-6  text-xl text-slate-200/90 leading-relaxed hiw-reveal-text opacity-0 translate-y-4 text-center">
                 No spreadsheets. No second-guessing. MixxFit turns your daily effort into a clear plan and results you can track.
             </p>
 
@@ -24,32 +24,50 @@ import HowItWorksStep from "./howItWorksStep.astro";
 
             <div>
                 <HowItWorksStep
-                    step="01"
-                    title="Create your profile"
-                    text="Add your height, weight, and goal. MixxFit sets realistic calorie and training targets for you right away."
+                step="01"
+                title="Create your profile"
+                text="Add your height, weight, and goal. MixxFit sets realistic calorie and training targets for you right away."
                 />
 
                 <HowItWorksStep
-                    step="02"
-                    title="Log your training"
-                    text="Pick exercises from the library or build your own routine. Every set is saved and organized automatically."
+                step="02"
+                title="Log your training"
+                text="Pick exercises from the library or build your own routine. Every set is saved and organized automatically."
                 />
 
                 <HowItWorksStep
-                    step="03"
-                    title="Watch your progress"
-                    text="Your dashboard shows monthly activity, weight trends, and recent session summaries so you can stay consistent."
+                step="03"
+                title="Watch your progress"
+                text="Your dashboard shows monthly activity, weight trends, and recent session summaries so you can stay consistent."
                 />
             </div>
         </div>
     </div>
 
-    <div class="mx-auto mt-14 max-w-7xl rounded-3xl bg-teal-200/20 px-4 sm:px-6 py-8 lg:px-10 md:py-10 shadow-all">
-        <h3 class="text-2xl font-bold text-slate-100">Built for consistency, not complexity</h3>
-        <p class="mt-4 text-lg md:text-xl text-slate-200/90 leading-relaxed max-w-4xl">
-            Whether you train three times a week or every day, MixxFit keeps your workouts, weight, and calorie goals connected in one clear flow.
-            You always know what to do next and how far you have come.
-        </p>
+
+
+    <div class="hidden md:flex flex-col w-full mt-10 gap-4">
+        <div class="flex font-semibold flex-col mx-auto gap-4 items-center ">
+            <h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-slate-100 leading-tight hiw-reveal-text opacity-0 translate-y-4 text-center">Dashboard Showcase</h1>
+            <p class="  text-lg sm:text-xl text-slate-200/90 leading-relaxed hiw-reveal-text opacity-0 translate-y-4 text-center">This is your control panel. From here you can track statistics of the key metrics that are being logged inside of an application
+            </p>
+        </div>
+
+        <div class="w-full p-4 mx-auto ">
+            <div class="xl:w-[80%] mx-auto border-4 border-slate-600 rounded-lg shadow-lg hover:shadow-2xl transition duration-200">
+                <img src="/public/dashboard-mixxfit.png" alt="dashboard-showcase-image">
+            </div>
+            <p class="mx-auto  text-lg sm:text-xl text-slate-200/90 leading-relaxed hiw-reveal-text opacity-0 translate-y-4 text-center font-semibold">
+            </p>
+        </div>
+
+        <div class="mx-auto max-w-7xl rounded-3xl bg-teal-200/20 px-4 sm:px-6 py-8 lg:px-10 md:py-10 shadow-all">
+            <h3 class="text-2xl font-bold text-slate-100">Built for consistency, not complexity</h3>
+            <p class="text-lg md:text-xl text-slate-200/90 leading-relaxed max-w-4xl">
+                Whether you train three times a week or every day, MixxFit keeps your workouts, weight, and calorie goals connected in one clear flow.
+                You always know what to do next and how far you have come.
+            </p>
+        </div>
     </div>
 </section>
 
@@ -70,7 +88,7 @@ import HowItWorksStep from "./howItWorksStep.astro";
 <script>
     const revealTargets = document.querySelectorAll<HTMLElement>('.hiw-reveal-title, .hiw-reveal-text, .hiw-step-reveal');
 
-    const observer = new IntersectionObserver(
+        const observer = new IntersectionObserver(
         (entries, obs) => {
             entries.forEach((entry) => {
                 if (!entry.isIntersecting) return;
@@ -82,10 +100,10 @@ import HowItWorksStep from "./howItWorksStep.astro";
             threshold: 0.2,
             rootMargin: '0px 0px -30px 0px'
         }
-    );
+        );
 
-    revealTargets.forEach((el, index) => {
-        el.style.transitionDelay = `${index * 90}ms`;
-        observer.observe(el);
-    });
-</script>
+        revealTargets.forEach((el, index) => {
+            el.style.transitionDelay = `${index * 90}ms`;
+            observer.observe(el);
+        });
+    </script>
