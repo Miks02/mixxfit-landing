@@ -1,0 +1,83 @@
+---
+import HeroStatCard from "./heroStatCard.astro";
+
+---
+
+<section class="flex flex-col md:flex-row w-full pt-30 items-center justify-center mx-auto gap-20 min-h-screen bg-linear-to-br from-slate-500 to-slate-500/90 px-12 rounded-b-[200px] shadow-all">
+    <div class="flex flex-wrap gap-6">
+        <div class="flex flex-col font-bold text-3xl md:text-7xl">
+            <h1 class="text-white">Train Smarter</h1>
+            <h1 class="text-amber-400 ">Track Everything</h1>
+        </div>
+
+        <p class="text-slate-100/90 font-medium md:text-lg">
+            <span class="text-white font-bold">Mixx<span class="text-amber-400">Fit</span></span> is your all-in-one fitness companion. Log workouts, monitor your weight progress,
+            and visualize your consistency.
+        </p>
+
+        <div class="flex flex-wrap md:flex-nowrap wrap-anywhere w-full gap-4">
+            <a href="#" class="block w-full text-center rounded-md shadow-lg text-gray-800 font-semibold p-2 bg-linear-to-br from-amber-400 to-amber-500 hover:opacity-70 active:opacity-50 transition-opacity duration-200">Begin Your Journey</a>
+
+            <a href="#" class="block w-full text-center rounded-md shadow-lg text-white font-semibold p-2 bg-linear-to-br from-slate-300/40 to-slate-400/80 backdrop-blur-2xl hover:opacity-70 active:opacity-50 transition-opacity duration-200">How It Works</a>
+        </div>
+    </div>
+
+    <div class="bg-white shadow-2xl bg-radial-[at_50%_50%] from-yellow-500 to-yellow-600 rounded-full py-15 md:py-30 relative">
+        <div class="hidden xl:block absolute -top-5 right-1/2 transform translate-x-1/2 bg-sky-200/90 backdrop-blur-sm shadow-lg font-semibold text-gray-600 rounded-lg p-4">
+            <div class="flex gap-4 items-center">
+                <i class="fa-solid fa-dumbbell text-sky-600 text-xl"></i>
+
+                <div class="flex flex-col">
+                    <p class="text-sm">Last Workout</p>
+                    <p class="text-slate-800">Upper Body - 6 Exercises</p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden xl:block absolute top-40 -left-10 bg-amber-200/90 backdrop-blur-sm shadow-lg rounded-xl p-4 font-semibold text-gray-600 ">
+            <div class="flex gap-4 items-center">
+                <i class="fa-solid fa-fire-flame-curved text-amber-600 text-2xl"></i>
+
+                <div class="flex flex-col">
+                    <p class="text-sm">Daily Calories</p>
+                    <p class="text-slate-800">3143 kCal</p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden xl:block absolute bottom-40 right-0 font-semibold bg-emerald-200/90 backdrop-blur-sm text-gray-600 shadow-lg rounded-lg p-4">
+            <div class="flex gap-4 items-center">
+                <i class="fa-solid fa-book-open text-emerald-600 text-xl"></i>
+
+                <div class="flex flex-col">
+                    <p class="text-sm">Exercise Library</p>
+                    <p class="text-slate-800 text-lg"> 240+ Exercises</p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden xl:block absolute -bottom-5 font-semibold bg-violet-200/90 backdrop-blur-sm text-gray-600 right-1/2 transform translate-x-1/2  shadow-lg rounded-lg p-4">
+            <div class="flex gap-4 items-center">
+                <i class="fa-solid fa-weight-scale text-violet-600 text-xl"></i>
+
+                <div class="flex flex-col">
+                    <p class="text-sm">Weight Progress</p>
+                    <p class="text-slate-800 text-lg">85kg > 80kg</p>
+
+                </div>
+            </div>
+        </div>
+
+
+        <img src="/public/hero-image.png" class="" alt="">
+    </div>
+
+</section>
+
+
+<script>
+
+</script>
