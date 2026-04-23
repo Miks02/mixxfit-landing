@@ -1,0 +1,30 @@
+---
+
+const {icon, iconColor, title, text} = Astro.props;
+
+---
+
+
+
+<div class="feature-card-reveal max-w-125 opacity-0 ">
+    <div class="flex flex-col gap-6 p-6 bg-slate-200 shadow-lg rounded-lg font-semibold transform hover:-translate-y-4 duration-200 hover:shadow-xl">
+        <i class=`${icon} ${iconColor} text-3xl`></i>
+
+        <div class="flex flex-col gap-2">
+            <h4 class="text-xl text-slate-800">{title}</h4>
+            <p class="text-slate-700 font-[550]">{text}</p>
+        </div>
+    </div>
+</div>
+
+<style>
+    .feature-card-reveal {
+        transition: opacity 800ms ease, transform 1000ms ease, box-shadow 500ms ease;
+        will-change: opacity, transform;
+    }
+
+    .feature-card-reveal.is-visible {
+        opacity: 1;
+        transform: translateX(0);
+    }
+</style>

@@ -1,0 +1,73 @@
+---
+import FeatureCard from "./featureCard.astro";
+---
+
+
+<section class="flex flex-col w-full p-8 gap-4">
+    <div class="flex font-semibold flex-col mx-auto gap-4 items-center">
+        <h3 class="text-xl text-amber-800 px-3 py-2 bg-red-100/90 backdrop-blur-sm rounded-lg shadow-lg">Features</h3>
+        <h1 class="text-4xl text-slate-800 text-center">One app for all your gym needs</h1>
+        <p class="text-slate-800 text-center">From your first rep to your hundreth personal record - <span class="italic font-bold">MixxFit</span> keeps the full picture of your training
+            and weight progress goals
+        </p>
+    </div>
+
+    <div class="w-full flex flex-wrap items-center justify-center mx-auto gap-6 mt-10 max-w-500">
+        <FeatureCard
+            title="Workout Logging"
+            text="Log workouts during or after your gym session. Build your training history with zero friction"
+            icon="fa-solid fa-dumbbell"
+            iconColor="text-sky-600"
+            />
+        <FeatureCard
+            title="Weight Tracking"
+            text="Record your weight over time and watch progress plot against your target on a clean line chart"
+            icon="fa-solid fa-weight-scale"
+            iconColor="text-violet-600"/>
+        <FeatureCard
+            title="Progress Charts"
+            text="Visualize workouts per month and weight trends. Spot momentum before it fades."
+            icon="fa-solid fa-chart-line"
+            iconColor="text-indigo-600"/>
+        <FeatureCard
+            title="Calorie Calculator"
+            text="Estimate daily calories based on your body, goals and activity level. Built right into the dashboard."
+            icon="fa-solid fa-fire-flame-curved"
+            iconColor="text-amber-600"/>
+        <FeatureCard
+            title="Save Your Routines"
+            text="Add and manage your workout templates. Adding exercise during your current session has never been easier!"
+            icon="fa-solid fa-save"
+            iconColor="text-cyan-600"/>
+        <FeatureCard
+            title="Exercise Library"
+            text="Browse a growing library of exercises, add and manage your own custom exercises."
+            icon="fa-solid fa-book-open"
+            iconColor="text-emerald-600"/>
+
+    </div>
+</section>
+
+<script>
+    const cards = document.querySelectorAll<HTMLElement>('.feature-card-reveal');
+
+    const observer = new IntersectionObserver(
+        (entries, obs) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+
+                entry.target.classList.add('is-visible');
+                obs.unobserve(entry.target);
+            });
+        },
+        {
+            threshold: 0.2,
+            rootMargin: '0px 0px -40px 0px'
+        }
+    );
+
+    cards.forEach((card, index) => {
+        card.style.transitionDelay = `${index * 70}ms`;
+        observer.observe(card);
+    });
+</script>

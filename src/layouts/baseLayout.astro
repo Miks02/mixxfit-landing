@@ -1,7 +1,8 @@
 ---
 import "../styles/global.css";
 import Navbar from "../components/navbar.astro"
-import Hero from "../components/hero.astro";
+import Hero from "../components/hero/hero.astro";
+import MainLayout from "./mainLayout.astro";
 
 const { title = "MixxFit" } = Astro.props;
 const { subtitle = "Begin Your Journey" } = Astro.props;
@@ -21,6 +22,7 @@ const { subtitle = "Begin Your Journey" } = Astro.props;
 
 		<main class="mx-auto flex flex-col">
             <Hero/>
+            <MainLayout/>
         </main>
 	</body>
 </html>

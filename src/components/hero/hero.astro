@@ -1,0 +1,74 @@
+---
+import HeroStatCard from "./heroStatCard.astro";
+
+---
+
+<section class="flex flex-col md:flex-row w-full pt-30 items-center justify-center mx-auto gap-10 md:gap-20 min-h-screen bg-linear-to-br from-slate-500 to-slate-500/90 px-12 rounded-b-[100px] md:rounded-b-[200px] shadow-all">
+    <div class="flex flex-wrap gap-6">
+        <div class="flex flex-col font-bold text-3xl sm:text-5xl md:text-7xl">
+            <h1 class="text-white">Train Smarter</h1>
+            <h1 class="text-amber-400 ">Track Everything</h1>
+        </div>
+
+        <p class="text-slate-100/90 font-medium md:text-lg">
+            <span class="text-white font-bold">Mixx<span class="text-amber-400">Fit</span></span> is your all-in-one fitness companion. Log workouts, monitor your weight progress,
+            and visualize your consistency.
+        </p>
+
+        <div class="flex flex-wrap md:flex-nowrap wrap-anywhere w-full gap-4">
+            <a href="https://vitalops-web.onrender.com" class="block w-full text-center rounded-md shadow-lg text-gray-800 font-semibold p-2 bg-linear-to-br from-amber-400 to-amber-500 hover:opacity-70 active:opacity-50 transition-opacity duration-200">Begin Your Journey</a>
+
+            <a href="#" class="block w-full text-center rounded-md shadow-lg text-white font-semibold p-2 bg-linear-to-br from-slate-300/40 to-slate-400/80 backdrop-blur-2xl hover:opacity-70 active:opacity-50 transition-opacity duration-200">How It Works</a>
+        </div>
+    </div>
+
+    <div class="bg-white shadow-2xl bg-radial-[at_50%_50%] from-yellow-500 to-yellow-600 rounded-full py-15 md:py-30 relative">
+        <HeroStatCard
+            title="Last Workout"
+            subtitle="Upper Body - 6 Exercises"
+            icon="fa-solid fa-dumbbell"
+            cardColor="bg-sky-200/90"
+            iconColor="text-sky-600"
+            positionClasses="-top-5 right-1/2 translate-x-1/2"
+            animDelay="0s"
+        />
+
+        <HeroStatCard
+            title="Daily Calories"
+            subtitle="3143 kCal"
+            icon="fa-solid fa-fire-flame-curved"
+            cardColor="bg-amber-200/90"
+            iconColor="text-amber-600"
+            positionClasses="top-40 -left-10"
+            animDelay="1s"
+        />
+
+        <HeroStatCard
+            title="Exercise Library"
+            subtitle="240+ Exercises"
+            icon="fa-solid fa-book-open"
+            cardColor="bg-emerald-200/90"
+            iconColor="text-emerald-600"
+            positionClasses="bottom-40 right-0"
+            animDelay="2s"
+        />
+
+        <HeroStatCard
+            title="Weight Progress"
+            subtitle="85kg > 80kg"
+            icon="fa-solid fa-weight-scale"
+            cardColor="bg-violet-200/90"
+            iconColor="text-violet-600"
+            positionClasses="-bottom-5 right-1/2 translate-x-1/2"
+            animDelay="0.5s"
+        />
+
+        <img src="/public/hero-image.png" alt="Person Working Out">
+    </div>
+
+</section>
+
+
+<script>
+
+</script>
