@@ -1,0 +1,23 @@
+---
+const { step, title, text } = Astro.props;
+---
+
+<div class="relative pl-16 pb-10 last:pb-0 hiw-step-reveal opacity-0 md:translate-x-6">
+    <span class="absolute left-0 top-0 inline-flex h-10 w-10 items-center justify-center rounded-full bg-amber-400 text-slate-900 font-extrabold text-base shadow-lg">
+        {step}
+    </span>
+    <h3 class="text-3xl font-bold text-slate-100 leading-tight">{title}</h3>
+    <p class="mt-2 text-xl text-slate-200/90 leading-relaxed max-w-2xl">{text}</p>
+</div>
+
+<style>
+    .hiw-step-reveal {
+        transition: opacity 700ms ease, transform 850ms ease;
+        will-change: opacity, transform;
+    }
+
+    .hiw-step-reveal.is-visible {
+        opacity: 1;
+        transform: translateX(0);
+    }
+</style>

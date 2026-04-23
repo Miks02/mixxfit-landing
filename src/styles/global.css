@@ -6,6 +6,11 @@
   font-variation-settings: "wght" 550;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
 .shadow-all {
   box-shadow: 0 0 5px #333;
 }
