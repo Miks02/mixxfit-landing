@@ -1,0 +1,35 @@
+---
+const {
+    title,
+    text,
+    icon,
+    linkHref,
+    linkText,
+    openInNewTab = false,
+} = Astro.props;
+---
+
+<article class="bg-slate-100 rounded-2xl p-6 shadow-lg hover:-translate-y-1 transition-transform duration-200">
+    <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-2xl bg-amber-500 text-gray-900 flex items-center justify-center shrink-0 shadow-md">
+            <i class={`${icon} text-lg`} aria-hidden="true"></i>
+        </div>
+        <div class="flex flex-col gap-1">
+            <h3 class="text-3xl/none sm:text-[2rem] font-semibold text-slate-900">{title}</h3>
+            <p class="text-slate-700 text-lg">{text}</p>
+
+            {
+                linkHref && linkText && (
+                    <a
+                        href={linkHref}
+                        target={openInNewTab ? "_blank" : undefined}
+                        rel={openInNewTab ? "noopener noreferrer" : undefined}
+                        class="text-amber-700 font-semibold text-lg hover:text-amber-800 active:opacity-60 transition-colors duration-200"
+                    >
+                        {linkText}
+                    </a>
+                )
+            }
+        </div>
+    </div>
+</article>

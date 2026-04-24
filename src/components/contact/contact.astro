@@ -1,0 +1,88 @@
+---
+import ContactInfoCard from "./contactInfoCard.astro";
+import ContactFormField from "./contactFormField.astro";
+
+---
+
+<section id="contact" class="w-full p-8 sm:p-10">
+	<div class="max-w-7xl mx-auto flex flex-col gap-8">
+		<div class="flex font-semibold flex-col mx-auto gap-4 items-center text-center">
+			<h3 class="text-xl text-amber-800 px-4 py-2 bg-red-100/90 backdrop-blur-sm rounded-lg shadow-lg">Contact</h3>
+			<h2 class="text-3xl sm:text-4xl text-gray-800">Got a question? We are here to help</h2>
+			<p class="text-gray-700 text-lg max-w-3xl">
+				Feature requests, bug reports, or partnership ideas. Drop us a line and get a real human response.
+			</p>
+		</div>
+
+		<div class="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-6 lg:gap-8 items-stretch">
+			<div class="flex flex-col gap-6">
+				<ContactInfoCard
+					title="Email us"
+					text="We reply within one business day."
+					icon="fa-regular fa-envelope"
+					linkHref="mailto:hello@mixxfit.app"
+					linkText="hello@mixxfit.app"
+				/>
+
+				<ContactInfoCard
+					title="Instagram"
+					text="Follow updates, feature drops, and product progress."
+					icon="fa-brands fa-instagram"
+					linkHref="https://instagram.com/mixxfit.app"
+					linkText="@mixxfit.app"
+					openInNewTab={true}
+				/>
+
+				<ContactInfoCard
+					title="Frequent updates"
+					text="New functionalities are shipped regularly based on real user feedback and training needs."
+					icon="fa-solid fa-wand-sparkles"
+					linkHref="#features"
+				/>
+			</div>
+
+			<form class="bg-slate-100 rounded-2xl p-6 sm:p-8 shadow-lg flex flex-col gap-5" action="#" method="post">
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+					<ContactFormField
+						label="Name"
+						name="name"
+						placeholder="Jane Doe"
+					/>
+
+					<ContactFormField
+						label="Email"
+						name="email"
+						type="email"
+						placeholder="you@email.com"
+					/>
+				</div>
+
+				<ContactFormField
+					label="Subject"
+					name="subject"
+					placeholder="How can we help?"
+				/>
+
+				<ContactFormField
+					label="Message"
+					name="message"
+					type="textarea"
+					rows={5}
+					placeholder="Tell us a bit about what you need..."
+				/>
+
+				<div class="flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between">
+					<p class="text-slate-700 font-medium">
+						By submitting you agree to our
+						<a href="#" class="font-semibold text-slate-800 underline decoration-2 underline-offset-4 hover:text-amber-700 transition-colors duration-200">privacy policy</a>.
+					</p>
+
+					<button type="submit" class="inline-flex items-center justify-center gap-2 bg-linear-to-br from-amber-400 to-amber-500 text-gray-900 font-semibold rounded-xl px-6 py-3 shadow-md hover:opacity-80 active:opacity-60 transition-opacity duration-200">
+						<i class="fa-regular fa-paper-plane" aria-hidden="true"></i>
+						Send message
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</section>

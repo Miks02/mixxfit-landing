@@ -1,0 +1,33 @@
+---
+const {
+    label,
+    name,
+    placeholder,
+    type = "text",
+    rows = 5,
+} = Astro.props;
+
+const isTextarea = type === "textarea";
+---
+
+<label class="flex flex-col gap-2 font-semibold text-slate-900 text-xl">
+    {label}
+
+    {
+        isTextarea ? (
+            <textarea
+                name={name}
+                rows={rows}
+                placeholder={placeholder}
+                class="bg-white border border-slate-300 rounded-xl px-4 py-3 text-slate-800 font-medium placeholder:text-slate-500 resize-y focus:outline-none focus:ring-2 focus:ring-amber-400"
+            ></textarea>
+        ) : (
+            <input
+                type={type}
+                name={name}
+                placeholder={placeholder}
+                class="bg-white border border-slate-300 rounded-xl px-4 py-3 text-slate-800 font-medium placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-amber-400"
+            />
+        )
+    }
+</label>
