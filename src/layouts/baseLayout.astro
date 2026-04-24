@@ -3,6 +3,7 @@ import "../styles/global.css";
 import Navbar from "../components/navbar.astro"
 import Hero from "../components/hero/hero.astro";
 import MainLayout from "./mainLayout.astro";
+import Footer from "../components/footer/footer.astro";
 
 const { title = "MixxFit" } = Astro.props;
 const { subtitle = "Begin Your Journey" } = Astro.props;
@@ -24,5 +25,7 @@ const { subtitle = "Begin Your Journey" } = Astro.props;
             <Hero/>
             <MainLayout/>
         </main>
+
+		<Footer/>
 	</body>
 </html>
