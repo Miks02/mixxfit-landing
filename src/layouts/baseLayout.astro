@@ -10,24 +10,32 @@ const { subtitle = "Begin Your Journey" } = Astro.props;
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
-		<meta name="viewport" content="width=device-width" />
-        <meta name="google-site-verification" content="iphcLKRS3IBRs8aJGcpysmR7sZKnSCCOb418YuhOQXQ" />
-        <meta name="description" content="Track your workouts and weight progress goals. Simple and efficient application made for your fitness needs">
-		<meta name="generator" content={Astro.generator} />
-		<title>{title} | {subtitle}</title>
-	</head>
-	<body class="bg-yellow-500">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="google-site-verification" content="iphcLKRS3IBRs8aJGcpysmR7sZKnSCCOb418YuhOQXQ" />
+    <meta name="description" content="Track your workouts and weight progress goals. Simple and efficient application made for your fitness needs">
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} | {subtitle}</title>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "MixxFit",
+            "url": "https://mixxfit.onrender.com/"
+        }
+    </script>
+</head>
+<body class="bg-yellow-500">
 
-        <Navbar/>
+    <Navbar/>
 
-		<main class="mx-auto flex flex-col">
-            <Hero/>
-            <MainLayout/>
-        </main>
+    <main class="mx-auto flex flex-col">
+        <Hero/>
+        <MainLayout/>
+    </main>
 
-		<Footer/>
-	</body>
+    <Footer/>
+</body>
 </html>
