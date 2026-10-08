@@ -44,14 +44,14 @@ import ContactFormField from "./contactFormField.astro";
                 method="post"
             >
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <ContactFormField label="Name" name="name" placeholder="Jane Doe" />
+                    <ContactFormField label="Name" name="name" placeholder="Jane Doe" required />
 
-                    <ContactFormField label="Email" name="email" type="email" placeholder="you@email.com" />
+                    <ContactFormField label="Email" name="email" type="email" placeholder="you@email.com" required />
                 </div>
 
                 <ContactFormField label="Subject" name="subject" placeholder="How can we help?" />
 
-                <ContactFormField label="Message" name="message" type="textarea" rows={5} placeholder="Tell us a bit about what you need..." />
+                <ContactFormField label="Message" name="message" type="textarea" rows={5} placeholder="Tell us a bit about what you need..." required />
 
                 <div class="flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between">
                     <p class="text-slate-700 font-medium">
